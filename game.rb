@@ -1,4 +1,5 @@
 require 'pry'
+#test if number, rescue?? same guess twice
 
 def input_valid?(guess, range)
   begin
@@ -17,8 +18,8 @@ def check_guess(guess, answer, tries)
   elsif answer > guess
     puts 'Too low'
   else answer == guess
-    puts 'You won'
-
+    puts 'You won!'
+    exit
   end
 end
 
@@ -43,5 +44,4 @@ until tries == 5
   puts "Guess again"
   guess = gets.chomp.to_i
   puts "Answer: #{answer}"
-# binding.pry
 end
